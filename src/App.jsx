@@ -1,10 +1,10 @@
 import './App.css'
-import CenterText from './components/CenterText'
+import CenterComponent from './components/CenterComponent'
 
 function App() {
   return (
     <>
-      <CenterText />
+      <CenterComponent />
     </>
   )
 }

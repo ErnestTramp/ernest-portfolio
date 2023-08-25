@@ -1,20 +1,8 @@
 import React, { useRef, useEffect, useLayoutEffect } from 'react';
-import { gsap } from 'gsap';
+import { gsap, Power3 } from 'gsap';
 import './Arrow.css'
 
-export default function CenterText() {
-
-    const letters = useRef();
-
-    useLayoutEffect(() => {
-  
-    let ctx = gsap.context(() => {
-    gsap.from(".letter", { x: -100, stagger: .2, duration: 2});
-    }, letters);
-    
-    return () => ctx.revert(); // cleanup
-    
-  }, []);
+export default function CenterComponent() {
 
   const videoRef = useRef();
 
@@ -34,6 +22,10 @@ export default function CenterText() {
   }
 
   useEffect(() => {
+    gsap.from(".letter", {translateX: 200, opacity: 0, duration: .65, stagger: .04, ease: "back.out(1.8)"});
+    gsap.from(".video", { scale: 0, opacity: 0, duration: .55, delay: .25})
+    gsap.from(".arrow-container", { scale: 0, opacity: 0, duration: .45, delay: .45})
+    gsap.from(".orbs", { scale: 0, opacity: 0, duration: 1, delay: .55})
     document.addEventListener('mousemove', rotateVideo);
     return () => {
       document.removeEventListener('mousemove', rotateVideo);
@@ -42,8 +34,12 @@ export default function CenterText() {
 
   return (
     <div className="centerDiv">
+      <div className="orbs">
+        <div className="orb1"></div>
+        <div className="orb2"></div>
+      </div>
       <div className="video" ref={videoRef}></div>
-      <div className="text" ref={letters}>
+      <div className="text">
         <h1 className="ernest">
             <span className="letter">e</span>
             <span className="letter">r</span>
@@ -64,10 +60,10 @@ export default function CenterText() {
             <span className="letter">y</span>
         </h1>
       </div>
-        <a href="#" class="arrow-container">
-            <div class="arrow"></div>
-            <div class="arrow"></div>
-            <div class="arrow"></div>  
+        <a href="#" className="arrow-container">
+            <div className="arrow"></div>
+            <div className="arrow"></div>
+            <div className="arrow"></div>  
         </a>
     </div>
   );
