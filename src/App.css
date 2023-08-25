@@ -1,0 +1,30 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(29, 29, 31, 1);
+  color: var(--text1);
+}
+
+.centerText {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.text {
+  width: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.ernest,
+.brenchley {
+  text-transform: lowercase;
+  letter-spacing: -.05em;
+  font-size: 17vh !important;
+  margin: 0;
+}
