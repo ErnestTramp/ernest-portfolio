@@ -13,6 +13,7 @@ header {
     display: flex;
     align-items: center;
     z-index: 999;
+    background: transparent;
 }
 
 .nav {
@@ -25,8 +26,22 @@ header {
     transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1);
 }
 
-.nav:hover {
-    color: #535bf2;
+.elem {
+    position: relative;
+    display: inline-block;
+    transition: background-position .4s ease;
+    background-image: linear-gradient(to right, #ffffff 0%, #fff 50%, #646cff 51%, #646cff 100%);
+    background-repeat: no-repeat;
+    background-size: 200% 200%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.elem:hover {
+    background-position: 100% 0;
+    transition: background-position .3s ease-in-out;
+    color: transparent;
 }
 
 .contact {
@@ -36,9 +51,5 @@ header {
     padding: 1.6vh 4vh;
     font-weight: 600;
     font-family: "font-regular";
-    transition: color .4s cubic-bezier(0.175, 0.885, 0.32, 1);
-}
-
-.contact:hover {
-    background-color: #646cff;
+    border: 2px solid #fff;
 }
