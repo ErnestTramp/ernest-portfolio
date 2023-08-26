@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useLayoutEffect } from 'react';
 import { gsap, Power3 } from 'gsap';
+import AnimateLoad from './AnimateLoad';
 import './Arrow.css'
 
 export default function CenterComponent() {
@@ -22,10 +23,7 @@ export default function CenterComponent() {
   }
 
   useEffect(() => {
-    gsap.from(".letter", {translateX: 200, opacity: 0, duration: .65, stagger: .04, ease: "back.out(1.8)"});
-    gsap.from(".video", { scale: 0, opacity: 0, duration: .55, delay: .25})
-    gsap.from(".arrow-container", { scale: 0, opacity: 0, duration: .45, delay: .45})
-    gsap.from(".orbs", { scale: 0, opacity: 0, duration: 1, delay: .55})
+    AnimateLoad();
     document.addEventListener('mousemove', rotateVideo);
     return () => {
       document.removeEventListener('mousemove', rotateVideo);
@@ -34,6 +32,7 @@ export default function CenterComponent() {
 
   return (
     <div className="centerDiv">
+      <h2 className="intro-text">Hey there :)</h2>
       <div className="orbs">
         <div className="orb1"></div>
         <div className="orb2"></div>

@@ -29,6 +29,8 @@
     position: absolute;
     left: 50%;
     transition: all 0.4s ease;
+    animation: arrowOpacity 4s linear infinite;
+
 }
 
 .arrow:before,
@@ -39,8 +41,8 @@
     position: absolute;
     transform-origin: bottom right;
     background: #fff;
-    width: 4px;
-    height: 50px;
+    width: .5vh;
+    height: 4.5vh;
     border-radius: 10px;
     transform: translate(-50%, -50%) rotateZ(-45deg);
 }
@@ -53,14 +55,31 @@
 .arrow:nth-child(1) {
     opacity: 0.3;
     top: 35%;
+    animation-delay: 0s;
 }
 
 .arrow:nth-child(2) {
     opacity: 0.6;
-    top: 55%;
+    top: 50%;
+    animation-delay: 0.35s;
 }
 
 .arrow:nth-child(3) {
     opacity: 0.9;
-    top: 75%;
+    top: 65%;
+    animation-delay: .7s;
+}
+
+@keyframes arrowOpacity {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(5px);
+    }
 }
