@@ -3,54 +3,6 @@ import './ProjectPage.css';
 import StarsCanvas from './StarsCanvas';
 
 export default function ProjectPage() {
-
-    const projects = [
-        {
-            id: 1,
-            type: 'Web Development',
-            title: 'Project 1',
-            description: 'This is the description for Project 1. It involves web development tasks.',
-            // ... other properties ...
-        },
-        {
-            id: 2,
-            type: 'Mobile App',
-            title: 'Project 2',
-            description: 'Project 2 is a mobile app development project with unique features.',
-            // ... other properties ...
-        },
-        {
-            id: 3,
-            type: 'Mobile App',
-            title: 'Project 3',
-            description: 'Project 2 is a mobile app development project with unique features.',
-            // ... other properties ...
-        },
-        {
-            id: 4,
-            type: 'Mobile App',
-            title: 'Project 4',
-            description: 'Project 2 is a mobile app development project with unique features.',
-            // ... other properties ...
-        },
-        {
-            id: 5,
-            type: 'Mobile App',
-            title: 'Project 5',
-            description: 'Project 2 is a mobile app development project with unique features.',
-            // ... other properties ...
-        },
-        {
-            id: 6,
-            type: 'Mobile App',
-            title: 'Project 6',
-            description: 'Project 2 is a mobile app development project with unique features.',
-            // ... other properties ...
-        },
-    ]
-
-    const [selectedProject, setSelectedProject] = useState(projects[0]); // Initialize with the first project
-
     useEffect(() => {
 
 
@@ -181,9 +133,9 @@ export default function ProjectPage() {
                     <div className="carousel-item"></div>
                 </div>
                 <div className="project-text">
-                    <p className='project-type'>{selectedProject.type}</p>
-                    <h2 className='project-title'>{selectedProject.title}</h2>
-                    <p>{selectedProject.description}</p>
+                    <p className='project-type'>selectedProject.type</p>
+                    <h2 className='project-title'>selectedProject.title</h2>
+                    <p>selectedProject.description</p>
                 </div>
             </div>
         </>
