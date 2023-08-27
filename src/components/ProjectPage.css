@@ -68,3 +68,29 @@ body {
 .ball.active {
     opacity: 1;
 }
+
+.project-text {
+    position: absolute;
+    bottom: 8%;
+    left: 4%;
+    font-family: "font-regular";
+}
+
+.project-text h2 {
+    font-size: 5vh;
+    margin: 0;
+    text-transform: capitalize;
+    margin-bottom: 1vh;
+    margin-top: -.5vh;
+}
+
+.project-text p {
+    margin: 0;
+    font-size: 2vh;
+}
+
+.project-type {
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    opacity: .6;
+}

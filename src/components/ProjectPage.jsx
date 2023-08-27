@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import './ProjectPage.css';
 import StarsCanvas from './StarsCanvas';
+import throttle from 'lodash/throttle';
 
 export default function ProjectPage() {
+
     useEffect(() => {
-
-
         /*--------------------
         Vars
         --------------------*/
@@ -18,7 +18,7 @@ export default function ProjectPage() {
         Constants
         --------------------*/
         const speedWheel = 0.02;
-        const speedDrag = -0.1;
+        const speedDrag = -0.01;
 
         /*--------------------
         Get Z
@@ -37,13 +37,28 @@ export default function ProjectPage() {
             const zIndex = getZindex([...$items], active)[index];
             item.style.setProperty('--zIndex', zIndex);
             item.style.setProperty('--active', (index - active) / $items.length);
+            const throttledFunction = throttle(() => {
+                const lol2 = findActiveItemId();
+            }, 500); 
         };
-
+        
         const animation = () => {
             progress = Math.max(0, Math.min(progress, 100));
             active = Math.floor(progress / 100 * ($items.length - 1));
 
             $items.forEach((item, index) => displayItems(item, index, active));
+        };
+
+        const findActiveItemId = () => {
+            for (let i = 0; i < $items.length; i++) {
+                const item = $items[i];
+                const activeValue = parseFloat(item.style.getPropertyValue('--active'));
+                if (activeValue === 0) {
+                    return item.id;
+                }
+            }
+            // If no item has an active property of 0, you can return a default value or handle it as needed.
+            return null;
         };
 
         /*--------------------
@@ -57,16 +72,16 @@ export default function ProjectPage() {
 
         const handleMouseMove = (e) => {
             if (e.type === 'mousemove') {
-                $cursors.forEach(($cursor) => {
-                    $cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-                });
+              $cursors.forEach(($cursor) => {
+                $cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+              });
             }
             if (!isDown) return;
             const x = e.clientX || (e.touches && e.touches[0].clientX) || 0;
             const mouseProgress = (x - startX) * speedDrag;
             progress = progress + mouseProgress;
             animation();
-        };
+          };
 
         const handleMouseDown = e => {
             isDown = true;
@@ -78,6 +93,7 @@ export default function ProjectPage() {
         };
 
         animation();
+
         /*--------------------
         Click on Items
         --------------------*/
@@ -85,7 +101,6 @@ export default function ProjectPage() {
             item.addEventListener('click', () => {
                 progress = (i / $items.length) * 100 + 10;
                 animation();
-                console.log(item[i])
             });
             item.addEventListener("mouseenter", () => {
                 const ball = document.querySelector('.ball');
@@ -106,12 +121,13 @@ export default function ProjectPage() {
         document.addEventListener('touchend', handleMouseUp);
 
         const ball = document.querySelector('.ball');
-
-        document.addEventListener('mousemove', (e) => {
+        const updateBallPosition = throttle((e) => {
             const xxx = e.clientX;
-            const yyy = e.clientY - 200;
+            const yyy = e.clientY - 150;
             ball.style.transform = `translate(${xxx}px, ${yyy}px)`;
-        });
+        }, 16);
+        
+        document.addEventListener('mousemove', updateBallPosition);
     }, []);
 
     return (
@@ -125,12 +141,12 @@ export default function ProjectPage() {
                     <div className="ball">
                         <h3>Drag or Click</h3>
                     </div>
-                    <div className="carousel-item"></div>
-                    <div className="carousel-item"></div>
-                    <div className="carousel-item"></div>
-                    <div className="carousel-item"></div>
-                    <div className="carousel-item"></div>
-                    <div className="carousel-item"></div>
+                    <div className="carousel-item" id='1'></div>
+                    <div className="carousel-item" id='2'></div>
+                    <div className="carousel-item" id='3'></div>
+                    <div className="carousel-item" id='4'></div>
+                    <div className="carousel-item" id='5'></div>
+                    <div className="carousel-item" id='6'></div>
                 </div>
                 <div className="project-text">
                     <p className='project-type'>selectedProject.type</p>

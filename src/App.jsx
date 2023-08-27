@@ -2,8 +2,9 @@ import './App.css'
 import Header from './components/Header'
 import CenterComponent from './components/CenterComponent'
 import ProjectPage from './components/ProjectPage'
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import AboutPage from './components/AboutPage'
+import { Link, Element } from 'react-scroll';
 
 function App() {
 
@@ -21,11 +22,17 @@ function App() {
   return (
     <>
       <Header />
-      <CenterComponent />
-      <ProjectPage />
-      <AboutPage />
+      <Element name="home">
+        <CenterComponent />
+      </Element>
+      <Element name="projects">
+        <ProjectPage />
+      </Element>
+      <Element name="about">
+        <AboutPage />
+      </Element>
     </>
-  )
+  );
 }
 
 export default App
