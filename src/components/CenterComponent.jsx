@@ -7,9 +7,10 @@ export default function CenterComponent() {
   const introTexts = [
     'hello world',
     "hello mate",
-    'alright mate',
+    'hey x',
     'how you going',
     'nice to meet you',
+    'greetings',
   ];
 
   const [randomIntroText, setRandomIntroText] = useState('');
@@ -53,7 +54,9 @@ export default function CenterComponent() {
         <div className="orb1"></div>
         <div className="orb2"></div>
       </div>
-      <div className="video" ref={videoRef}></div>
+      <div className="video" ref={videoRef}>
+        <video src="/compressed.mp4" autoPlay={true} muted={true} loop={true}></video>
+      </div>
       <div className="text">
         <h1 className="ernest">
             <span className="letter">e</span>

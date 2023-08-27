@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import './ProjectPage.css';
+import StarsCanvas from './StarsCanvas';
 
 export default function ProjectPage() {
     useEffect(() => {
@@ -117,6 +118,7 @@ export default function ProjectPage() {
     return (
         <>
             <div className="centerDiv-2">
+                <StarsCanvas />
                 <div className="text-desc">
                     <p>MY PROJECTS</p>
                 </div>
