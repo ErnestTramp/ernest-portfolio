@@ -1,9 +1,59 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './ProjectPage.css';
 import StarsCanvas from './StarsCanvas';
 
 export default function ProjectPage() {
+
+    const projects = [
+        {
+            id: 1,
+            type: 'Web Development',
+            title: 'Project 1',
+            description: 'This is the description for Project 1. It involves web development tasks.',
+            // ... other properties ...
+        },
+        {
+            id: 2,
+            type: 'Mobile App',
+            title: 'Project 2',
+            description: 'Project 2 is a mobile app development project with unique features.',
+            // ... other properties ...
+        },
+        {
+            id: 3,
+            type: 'Mobile App',
+            title: 'Project 3',
+            description: 'Project 2 is a mobile app development project with unique features.',
+            // ... other properties ...
+        },
+        {
+            id: 4,
+            type: 'Mobile App',
+            title: 'Project 4',
+            description: 'Project 2 is a mobile app development project with unique features.',
+            // ... other properties ...
+        },
+        {
+            id: 5,
+            type: 'Mobile App',
+            title: 'Project 5',
+            description: 'Project 2 is a mobile app development project with unique features.',
+            // ... other properties ...
+        },
+        {
+            id: 6,
+            type: 'Mobile App',
+            title: 'Project 6',
+            description: 'Project 2 is a mobile app development project with unique features.',
+            // ... other properties ...
+        },
+    ]
+
+    const [selectedProject, setSelectedProject] = useState(projects[0]); // Initialize with the first project
+
     useEffect(() => {
+
+
         /*--------------------
         Vars
         --------------------*/
@@ -50,7 +100,6 @@ export default function ProjectPage() {
         const handleWheel = e => {
             const wheelProgress = e.deltaY * speedWheel;
             progress = progress + (wheelProgress * 2);
-            console.log(progress)
             animation();
         };
 
@@ -64,7 +113,6 @@ export default function ProjectPage() {
             const x = e.clientX || (e.touches && e.touches[0].clientX) || 0;
             const mouseProgress = (x - startX) * speedDrag;
             progress = progress + mouseProgress;
-            startX = x;
             animation();
         };
 
@@ -85,6 +133,7 @@ export default function ProjectPage() {
             item.addEventListener('click', () => {
                 progress = (i / $items.length) * 100 + 10;
                 animation();
+                console.log(item[i])
             });
             item.addEventListener("mouseenter", () => {
                 const ball = document.querySelector('.ball');
@@ -94,7 +143,6 @@ export default function ProjectPage() {
                 const ball = document.querySelector('.ball');
                 ball.classList.remove("active");
             })
-            
         });
 
         document.addEventListener('mousewheel', handleWheel);
@@ -108,10 +156,9 @@ export default function ProjectPage() {
         const ball = document.querySelector('.ball');
 
         document.addEventListener('mousemove', (e) => {
-        const xxx = e.clientX;
-        const yyy = e.clientY + 15;
-
-        ball.style.transform = `translate(${xxx}px, ${yyy}px)`;
+            const xxx = e.clientX;
+            const yyy = e.clientY - 200;
+            ball.style.transform = `translate(${xxx}px, ${yyy}px)`;
         });
     }, []);
 
@@ -132,6 +179,11 @@ export default function ProjectPage() {
                     <div className="carousel-item"></div>
                     <div className="carousel-item"></div>
                     <div className="carousel-item"></div>
+                </div>
+                <div className="project-text">
+                    <p className='project-type'>{selectedProject.type}</p>
+                    <h2 className='project-title'>{selectedProject.title}</h2>
+                    <p>{selectedProject.description}</p>
                 </div>
             </div>
         </>
