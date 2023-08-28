@@ -1,45 +1,52 @@
-const Projects = [
+const ProjectsData = [
   {
     id: 1,
-    title: "Project 1",
-    type: "Web Application",
+    title: "Worlds First 9 Flips",
+    type: "athletic feat",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam efficitur tortor non ante vehicula, et tincidunt libero dignissim.",
-    imageUrl: "project1.jpg",
+      "With a team of the worlds top trampoline athletes and designers, we made history.",
+    imageUrl: "/projectImg/9.jpg",
   },
   {
     id: 2,
-    title: "Project 2",
-    type: "Mobile App",
+    title: "The Highest Trampoline Jump",
+    type: "athletic feat",
     description:
-      "Vestibulum eget libero eget odio eleifend suscipit. Sed posuere vehicula nunc, eu facilisis odio ultricies nec.",
-    imageUrl: "project2.jpg",
+      "With help from the DD Squad, we broke the world record for the worlds highest trampoline jump.",
+    imageUrl: "/projectImg/slov.png",
   },
   {
     id: 3,
-    title: "Project 3",
-    type: "E-commerce Website",
+    title: "airparc camps",
+    type: "teaching",
     description:
-      "Fusce dignissim odio eu vestibulum. Sed sed metus eget velit tincidunt feugiat in at tortor.",
-    imageUrl: "project3.jpg",
+      "Alongside Airparc, Austria, me and my team have delivered 3 trampoline training camps in the Austrian Alps.",
+    imageUrl: "/projectImg/airparc.jpg",
   },
   {
     id: 4,
-    title: "Project 4",
-    type: "Data Analysis",
+    title: "Radial Flipz",
+    type: "youtube",
     description:
-      "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
-    imageUrl: "project4.jpg",
+      "I co-own the worlds biggest trampoline channel and team, scaling the YouTube to over 750,000 subscribers.",
+    imageUrl: "/projectImg/rflipz.png",
   },
   {
     id: 5,
-    title: "Project 5",
+    title: "BergToys",
+    type: "collaboration",
+    description:
+      "I have been consistently collaborating with BergToys for 2+ years to put on events and create unique content.",
+    imageUrl: "/projectImg/berg.jpeg",
+  },
+  {
+    id: 6,
+    title: "Travis Pastranas Trampoline",
     type: "Game Development",
     description:
       "Duis eu quam ut neque facilisis convallis. Nulla non neque vel purus varius ultrices.",
-    imageUrl: "project5.jpg",
+    imageUrl: "/projectImg/trav.png",
   },
-  // Add more projects as needed
 ];
 
-export default Projects;
+export default ProjectsData;

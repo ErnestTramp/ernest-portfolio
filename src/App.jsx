@@ -5,6 +5,7 @@ import ProjectPage from './components/ProjectPage'
 import { useEffect, useRef } from 'react'
 import AboutPage from './components/AboutPage'
 import { Link, Element } from 'react-scroll';
+import StarsCanvas from './components/StarsCanvas'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
         <CenterComponent />
       </Element>
       <Element name="projects">
+        <StarsCanvas />
         <ProjectPage />
       </Element>
       <Element name="about">
