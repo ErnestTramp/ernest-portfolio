@@ -1,17 +1,39 @@
 import { useEffect, useState, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import './ProjectPage.css';
 import ProjectsData from '../assets/Projects';
 import { gsap } from 'gsap';
+import Ball from './Ball';
 
 export default function ProjectPage() {
     const tl = gsap.timeline();
     const [width, setWidth] = useState(0);
     const [selectedItem, setSelectedItem] = useState(0);
     const carousel = useRef();
+    const carouselItems = useRef([]);
+    const { scrollYProgress } = useScroll();
+    
+    const offsetCarousel = useTransform(scrollYProgress, [0, 1], [-400, 400]);
 
     useEffect(() => {
         setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth - 160);
+
+        carousel.current.addEventListener("mousedown", () => {
+            document.querySelector(".ball").classList.remove("active");
+        });
+        carousel.current.addEventListener("mouseup", () => {
+            document.querySelector(".ball").classList.add("active");
+        });
+
+        carouselItems.current.forEach(itemRef => {
+            itemRef.addEventListener("mouseenter", () => {
+                document.querySelector(".ball").classList.add("active");
+            });
+
+            itemRef.addEventListener("mouseleave", () => {
+                document.querySelector(".ball").classList.remove("active");
+            });
+        });
     }, []);
 
     const handleClick = (id) => {
@@ -23,22 +45,29 @@ export default function ProjectPage() {
             tl.to(".txt", { y: 0, opacity: 1, duration: 0.3, stagger: 0.1 });
         }
     }
-    
 
     return (
         <div className="centerDiv-2">
             <div className="text-desc">
                 <p>my projects.</p>
             </div>
+            <Ball />
             <motion.div
                 ref={carousel}
                 className='carousel'
                 drag="x"
-                dragConstraints={{ right: 100, left: -width }}
+                dragConstraints={{ right: 40, left: -width }}
+                style={{ marginLeft: offsetCarousel }}
             >
                 {ProjectsData.map((project, index) => {
+                    const isSelected = index === selectedItem;
                     return (
-                        <motion.div id={project.id} className="carousel-item" key={project.id} onClick={() => {handleClick(project.id)}}>
+                        <motion.div
+                            ref={(element) => carouselItems.current.push(element)}
+                            className={`carousel-item ${isSelected ? 'selected' : ''}`}
+                            key={project.id}
+                            onClick={() => {handleClick(project.id)}}
+                        >
                             <img src={project.imageUrl} alt="Project Image" loading='lazy' />
                         </motion.div>
                     )

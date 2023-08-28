@@ -1,13 +1,12 @@
 import React, { useRef, useEffect, useState } from 'react';
 import AnimateLoad from './AnimateLoad';
 import './Arrow.css'
+import { Link } from 'react-scroll';
 
 export default function CenterComponent() {
 
   const introTexts = [
     'hello world',
-    "hello mate",
-    'hey x',
     'how you going',
     'nice to meet you',
     'greetings',
@@ -78,11 +77,11 @@ export default function CenterComponent() {
             <span className="letter">y</span>
         </h1>
       </div>
-        <a href="#" className="arrow-container">
+        <Link to="projects" spy={true} offset={-30} smooth={true} duration={1000} href="#" className="arrow-container">
             <div className="arrow"></div>
             <div className="arrow"></div>
             <div className="arrow"></div>  
-        </a>
+        </Link>
     </div>
   );
 }

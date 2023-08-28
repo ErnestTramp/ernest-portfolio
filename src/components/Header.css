@@ -21,7 +21,7 @@ header {
     display: flex;
     gap: 4vh;
     letter-spacing: -.05rem;
-    font-size: 4vh;
+    font-size: 3.5vh;
     transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1);
     cursor: pointer;
 }
@@ -44,12 +44,9 @@ header {
     color: transparent;
 }
 
-.contact {
+.socials {
     margin-left: auto;
-    margin-right: 4vh;
-    font-size: 3vh;
-    padding: 1.6vh 4vh;
-    font-weight: 600;
-    font-family: "font-regular";
-    border: 2px solid #fff;
+    margin-right: 6vh;
+    display: flex;
+    gap: 4vh;
 }

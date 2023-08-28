@@ -32,6 +32,8 @@
   margin-top: 5vh;
   transform: translate(-50%, -50%);
   filter: blur(100px);
+  pointer-events: none;
+
 }
 
 .orb1,
@@ -41,6 +43,8 @@
   border-radius: 50%;
   transform-origin: center center;
   animation: spin 10s linear infinite;
+  pointer-events: none;
+
 }
 
 .orb1 {
@@ -70,6 +74,8 @@
   transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
+  pointer-events: none;
+
 }
 
 .ernest,
@@ -79,6 +85,8 @@
   font-size: 17vh !important;
   margin: 0;
   display: inline-block;
+  pointer-events: none;
+
 }
 
 .brenchley {
@@ -105,6 +113,7 @@
   background-size: cover;
   background-position: center center;
   filter: brightness(0.7);
+  pointer-events: none;
 }
 
 .video video {
@@ -113,6 +122,8 @@
   position: absolute;
   object-fit: cover;
   z-index: 0;
+  pointer-events: none;
+
 }
 
 .intro-text {
@@ -124,4 +135,6 @@
   z-index: 99;
   font-size: 10vh;
   letter-spacing: -0.3rem;
+  pointer-events: none;
+
 }
