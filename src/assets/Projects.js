@@ -42,24 +42,37 @@ const ProjectsData = [
   {
     id: 6,
     title: "Travis Pastranas Trampoline",
-    type: "Game Development",
+    type: "Awesome project",
     description:
-      "Duis eu quam ut neque facilisis convallis. Nulla non neque vel purus varius ultrices.",
+      "When a name as big as Travis Pastrana says he needs the biggest trampoline in the world in his backgarden, he gets it.",
     imageUrl: "/projectImg/trav.png",
   },
   {
     id: 7,
-    title: "Coming soon...",
-    type: " ",
-    description: "We still have plenty of room to see what happens next... :)",
-    imageUrl: "https://i.ytimg.com/vi/Iqr3XIhSnUQ/hqdefault.jpg",
+    title: "react, css and more...",
+    type: "web development",
+    description:
+      "I am also a profficent full stack web developer, this website was written from scratch in react by me!",
+    imageUrl:
+      "https://www.freecodecamp.org/news/content/images/2023/02/image3-1.png",
   },
   {
     id: 8,
     title: "Coming soon...",
     type: " ",
-    description: "We still have plenty of room to see what happens next... :)",
-    imageUrl: "https://i.ytimg.com/vi/Iqr3XIhSnUQ/hqdefault.jpg",
+    description:
+      "Im only 18, we still have a lot of time to do some more amazing projects!",
+    imageUrl:
+      "https://i.ytimg.com/vi/fHt_h0Tmhmk/sddefault.jpg?sqp=-oaymwEmCIAFEOAD8quKqQMa8AEB-AH-BIAC6AKKAgwIABABGGUgZShlMA8=&rs=AOn4CLCpy7Eg3MA7ztdjPVKucljYT7MmMw",
+  },
+  {
+    id: 9,
+    title: "Coming soon...",
+    type: " ",
+    description:
+      "Im only 18, we still have a lot of time to do some more amazing projects!",
+    imageUrl:
+      "https://i.ytimg.com/vi/fHt_h0Tmhmk/sddefault.jpg?sqp=-oaymwEmCIAFEOAD8quKqQMa8AEB-AH-BIAC6AKKAgwIABABGGUgZShlMA8=&rs=AOn4CLCpy7Eg3MA7ztdjPVKucljYT7MmMw",
   },
 ];
 
