@@ -47,6 +47,20 @@ const ProjectsData = [
       "Duis eu quam ut neque facilisis convallis. Nulla non neque vel purus varius ultrices.",
     imageUrl: "/projectImg/trav.png",
   },
+  {
+    id: 7,
+    title: "Coming soon...",
+    type: " ",
+    description: "We still have plenty of room to see what happens next... :)",
+    imageUrl: "https://i.ytimg.com/vi/Iqr3XIhSnUQ/hqdefault.jpg",
+  },
+  {
+    id: 8,
+    title: "Coming soon...",
+    type: " ",
+    description: "We still have plenty of room to see what happens next... :)",
+    imageUrl: "https://i.ytimg.com/vi/Iqr3XIhSnUQ/hqdefault.jpg",
+  },
 ];
 
 export default ProjectsData;

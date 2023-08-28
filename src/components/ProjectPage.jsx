@@ -11,7 +11,7 @@ export default function ProjectPage() {
     const carousel = useRef();
 
     useEffect(() => {
-        setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+        setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth - 160);
     }, []);
 
     const handleClick = (id) => {
