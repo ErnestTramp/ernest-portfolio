@@ -19,19 +19,15 @@ body {
     top: 0;
     left: 0;
     z-index: 50;
-    pointer-events: none;
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
     gap: 3vh;
-    transform: rotate(-5deg);
 }
 
 .carousel-item {
-    overflow: hidden;
     min-width: 70vh;
     height: 50vh;
-    margin: calc(var(--height) * -0.5) 0 0 calc(var(--width) * -0.5);
     border-radius: 10px;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -39,7 +35,7 @@ body {
     user-select: none;
     box-shadow: 0 10px 50px 10px rgba(0, 0, 0, 0.5);
     background: black;
-    transform: rotate(5deg) translateY(-10vh);
+    transform: rotate(-5deg) translateY(-10vh);
     transition: transform 0.8s cubic-bezier(0, 0.02, 0, 1);
     z-index: 999;
 }
