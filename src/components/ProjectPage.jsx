@@ -5,6 +5,12 @@ import throttle from 'lodash/throttle';
 
 export default function ProjectPage() {
 
+    const [selectedProject, setSelectedProject] = useState({
+        type: '',
+        title: '',
+        description: '',
+      });
+
     useEffect(() => {
         /*--------------------
         Vars
@@ -33,13 +39,63 @@ export default function ProjectPage() {
         const $items = document.querySelectorAll('.carousel-item');
         const $cursors = document.querySelectorAll('.cursor');
 
+        function checkItems() {
+            $items.forEach((item, i) => {
+                const itemZIndex = item.style.getPropertyValue("--zIndex");
+                if (itemZIndex >= 6) {
+                    item.classList.add('currentProject');
+                    setSelectedProject(getProjectDataById(item.id));
+                } else {
+                    item.classList.remove('currentProject');
+                }
+            })
+        }
+
+        const getProjectDataById = (id) => {
+            if (id === 'project1') {
+              return {
+                type: 'Type 1',
+                title: 'Project Title 1',
+                description: 'Project Description 1',
+              };
+            } else if (id === 'project2') {
+              return {
+                type: 'Type 2',
+                title: 'Project Title 2',
+                description: 'Project Description 2',
+              };
+            } else if (id === 'project3') {
+                return {
+                  type: 'Type 3',
+                  title: 'Project Title 2',
+                  description: 'Project Description 2',
+                };
+              } else if (id === 'project4') {
+                return {
+                  type: 'Type 4',
+                  title: 'Project Title 2',
+                  description: 'Project Description 2',
+                };
+              } else if (id === 'project5') {
+                return {
+                  type: 'Type 5',
+                  title: 'Project Title 2',
+                  description: 'Project Description 2',
+                };
+              } else if (id === 'project6') {
+                return {
+                  type: 'Type 6',
+                  title: 'Project Title 2',
+                  description: 'Project Description 2',
+                };
+              }
+          };
+
         const displayItems = (item, index, active) => {
             const zIndex = getZindex([...$items], active)[index];
             item.style.setProperty('--zIndex', zIndex);
             item.style.setProperty('--active', (index - active) / $items.length);
-            const throttledFunction = throttle(() => {
-                const lol2 = findActiveItemId();
-            }, 500); 
+            checkItems();
         };
         
         const animation = () => {
@@ -47,18 +103,6 @@ export default function ProjectPage() {
             active = Math.floor(progress / 100 * ($items.length - 1));
 
             $items.forEach((item, index) => displayItems(item, index, active));
-        };
-
-        const findActiveItemId = () => {
-            for (let i = 0; i < $items.length; i++) {
-                const item = $items[i];
-                const activeValue = parseFloat(item.style.getPropertyValue('--active'));
-                if (activeValue === 0) {
-                    return item.id;
-                }
-            }
-            // If no item has an active property of 0, you can return a default value or handle it as needed.
-            return null;
         };
 
         /*--------------------
@@ -141,17 +185,17 @@ export default function ProjectPage() {
                     <div className="ball">
                         <h3>Drag or Click</h3>
                     </div>
-                    <div className="carousel-item" id='1'></div>
-                    <div className="carousel-item" id='2'></div>
-                    <div className="carousel-item" id='3'></div>
-                    <div className="carousel-item" id='4'></div>
-                    <div className="carousel-item" id='5'></div>
-                    <div className="carousel-item" id='6'></div>
+                    <div className="carousel-item" id='project1'></div>
+                    <div className="carousel-item" id='project2'></div>
+                    <div className="carousel-item" id='project3'></div>
+                    <div className="carousel-item" id='project4'></div>
+                    <div className="carousel-item" id='project5'></div>
+                    <div className="carousel-item" id='project6'></div>
                 </div>
                 <div className="project-text">
-                    <p className='project-type'>selectedProject.type</p>
-                    <h2 className='project-title'>selectedProject.title</h2>
-                    <p>selectedProject.description</p>
+                    <p className='project-type'>{selectedProject.type}</p>
+                    <h2 className='project-title'>{selectedProject.title}</h2>
+                    <p>{selectedProject.description}</p>
                 </div>
             </div>
         </>
