@@ -16,9 +16,9 @@ export default function Header() {
           <a className="elem contact">get in touch.</a>
           </div>
           <div className="socials">
-            <FontAwesomeIcon icon={faInstagram} className='instagram' size='2xl' />
-            <FontAwesomeIcon icon={faTiktok} className='tiktok' size='2xl' />
-            <FontAwesomeIcon icon={faYoutube} className='youtube' size='2xl' />
+            <FontAwesomeIcon icon={faInstagram} className='instagram icon' size='2xl' />
+            <FontAwesomeIcon icon={faTiktok} className='tiktok icon' size='2xl' />
+            <FontAwesomeIcon icon={faYoutube} className='youtube icon' size='2xl' />
           </div>
         </header>
       );

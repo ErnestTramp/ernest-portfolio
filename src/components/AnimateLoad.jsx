@@ -23,6 +23,7 @@ export default function AnimateLoad() {
       });
 
         gsap.from(".elem", {y: 50, opacity: 0, duration: .55, stagger: .25, delay: 1.5, ease: "back.out(1.9)"});
+        gsap.from(".icon", {y: -50, opacity: 0, duration: .45, stagger: .25, delay: 1.58, ease: "back.out(1.9)"});
         gsap.from(".letter", {translateX: 200, opacity: 0, duration: .65, stagger: .05, delay: 1.3, ease: "back.out(1.9)"});
         gsap.from(".video", { scale: 0, opacity: 0, duration: .55, delay: 1.55})
         gsap.from(".arrow-container", { scale: 0, opacity: 0, duration: .45, delay: 1.75})

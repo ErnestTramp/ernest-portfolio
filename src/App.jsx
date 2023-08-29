@@ -22,7 +22,7 @@ function App() {
 
   return (
     <>
-      <Header />
+    <Header />
       <Element name="home">
         <CenterComponent />
       </Element>
