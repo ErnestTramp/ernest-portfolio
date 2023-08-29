@@ -16,7 +16,7 @@ export default function ProjectPage() {
     const offsetCarousel = useTransform(scrollYProgress, [0, 1], [-400, 400]);
 
     useEffect(() => {
-        setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth - 160);
+        setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth - 400);
 
         carousel.current.addEventListener("mousedown", () => {
             document.querySelector(".ball").classList.remove("active");
@@ -56,7 +56,7 @@ export default function ProjectPage() {
                 ref={carousel}
                 className='carousel'
                 drag="x"
-                dragConstraints={{ right: 40, left: -width }}
+                dragConstraints={{ right: 150, left: -width }}
                 style={{ marginLeft: offsetCarousel }}
             >
                 {ProjectsData.map((project, index) => {

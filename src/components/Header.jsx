@@ -18,9 +18,9 @@ export default function Header() {
           </Link>
           </div>
           <div className="socials">
-            <FontAwesomeIcon icon={faInstagram} className='instagram icon' size='2xl' />
-            <FontAwesomeIcon icon={faTiktok} className='tiktok icon' size='2xl' />
-            <FontAwesomeIcon icon={faYoutube} className='youtube icon' size='2xl' />
+            <FontAwesomeIcon onClick={() => {window.open("https://instagram.com/ernest.tramp")}} icon={faInstagram} className='instagram icon' size='2xl' />
+            <FontAwesomeIcon onClick={() => {window.open("https://tiktok.com/@ernest.tramp")}} icon={faTiktok} className='tiktok icon' size='2xl' />
+            <FontAwesomeIcon onClick={() => {window.open("https://youtube.com/@RadialFlipz")}} icon={faYoutube} className='youtube icon' size='2xl' />
           </div>
         </header>
       );

@@ -1,0 +1,35 @@
+.brands {
+    width: 100%;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+}
+
+.brands p {
+    margin: 0;
+}
+
+.brandLogos {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+}
+
+.logo:nth-child(1) {
+    max-width: 45vh;
+}
+
+.logo:nth-child(4) {
+    max-width: 40vh;
+}
+
+.logo {
+    max-width: 35vh;
+    max-height: 100%;
+    object-fit: contain;
+}

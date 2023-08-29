@@ -37,7 +37,7 @@ const ProjectsData = [
     type: "collaboration",
     description:
       "I have been consistently collaborating with BergToys for 2+ years to put on events and create unique content.",
-    imageUrl: "/projectImg/berg.jpeg",
+    imageUrl: "/projectImg/berg.jpg",
   },
   {
     id: 6,
