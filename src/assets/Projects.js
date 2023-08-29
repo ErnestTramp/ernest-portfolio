@@ -29,7 +29,7 @@ const ProjectsData = [
     type: "youtube",
     description:
       "I co-own the worlds biggest trampoline channel and team, scaling the YouTube to over 750,000 subscribers.",
-    imageUrl: "/projectImg/rflipz.png",
+    imageUrl: "/projectImg/rflipz.jpg",
   },
   {
     id: 5,

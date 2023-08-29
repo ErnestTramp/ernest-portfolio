@@ -6,6 +6,7 @@ import { useEffect, useRef } from 'react'
 import AboutPage from './components/AboutPage'
 import { Link, Element } from 'react-scroll';
 import StarsCanvas from './components/StarsCanvas'
+import Contact from './components/Contact'
 
 function App() {
 
@@ -32,6 +33,9 @@ function App() {
       </Element>
       <Element name="about">
         <AboutPage />
+      </Element>
+      <Element name="contact">
+        <Contact />
       </Element>
     </>
   );

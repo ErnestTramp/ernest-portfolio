@@ -1,0 +1,50 @@
+.centerDiv-3 {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5vh;
+}
+
+.ernestImg {
+    max-width: 50%;
+    max-height: 55%;
+    border-radius: 10%;
+}
+
+.aboutText {
+    margin: 0;
+    max-width: 50%;
+    font-size: 2.5vh;
+    font-family: "font-regular", sans;
+    text-align: right;
+}
+
+.counters {
+    display: flex;
+    justify-content: flex-end;
+    gap: 13vh;
+}
+
+.counter {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-transform: lowercase;
+}
+
+.counter h3 {
+    margin: 0;
+    font-size: 2.5vh;
+    letter-spacing: 1px;
+    opacity: .7;
+}
+
+.count {
+    font-size: 5.8vh;
+    margin: 0;
+    margin-right: .5vh;
+}

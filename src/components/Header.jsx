@@ -13,7 +13,9 @@ export default function Header() {
             <Link to="about" spy={true} smooth={true} duration={800} className="elem about">
               about me.
             </Link>
-          <a className="elem contact">get in touch.</a>
+          <Link to="contact" spy={true} smooth={true} duration={800} className="elem contact">
+            get in touch.
+          </Link>
           </div>
           <div className="socials">
             <FontAwesomeIcon icon={faInstagram} className='instagram icon' size='2xl' />
