@@ -4,6 +4,96 @@
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     margin-top: 10vh;
+    font-family: "font-regular", sans;
+}
+
+.contactWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #f4f4ff06;
+    padding: 15vh 7vh;
+    border-radius: 35px;
+    margin-right: 10vh;
+    border: 3px solid #fff;
+}
+
+.contactWrapper h2 {
+    font-size: 6vh;
+    margin: 0;
+}
+
+.contactWrapper p {
+    margin: 0;
+    margin-bottom: 4vh;
+}
+
+.contactWrapper input {
+    background: transparent;
+    width: 90%;
+    border: none;
+    padding: 2vh 1vh;
+    font-family: "font-regular", sans;
+    color: antiquewhite;
+    font-size: 2.5vh;
+    border-bottom: 3px solid whitesmoke;
+}
+
+.contactWrapper input:focus {
+    outline: none;
+}
+
+.contactWrapper textarea:focus {
+    outline: none;
+}
+
+.contactWrapper textarea {
+    height: 10vh;
+    width: 90%;
+    background: transparent;
+    width: 90%;
+    border: none;
+    padding: 2vh 1vh;
+    font-family: "font-regular", sans;
+    color: antiquewhite;
+    font-size: 2.5vh;
+    border-bottom: 3px solid whitesmoke;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+.aws-button {
+    z-index: 9999 !important;
+}
+
+.aws-btn {
+
+    --button-default-height: 51px;
+    --button-default-font-size: 17px;
+    --button-default-border-radius: 6px;
+    --button-horizontal-padding: 20px;
+    --button-raise-level: 6px;
+    --button-hover-pressure: 2;
+    --transform-speed: .185s;
+    --button-primary-color: #475472;
+    --button-primary-color-dark: #2a3143;
+    --button-primary-color-light: #d4d9e4;
+    --button-primary-color-hover: #424e6a;
+    --button-primary-border: none;
+    --button-secondary-color: #fffc6c;
+    --button-secondary-color-dark: #b9b500;
+    --button-secondary-color-light: #6c6a00;
+    --button-secondary-color-hover: #fffb3e;
+    --button-secondary-border: none;
+    --button-anchor-color: #f3c8ad;
+    --button-anchor-color-dark: #734922;
+    --button-anchor-color-light: #4c3016;
+    --button-anchor-color-hover: #f1bfa0;
+    --button-anchor-border: 1px solid #8c633c;
 }
