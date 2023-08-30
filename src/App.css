@@ -6,7 +6,7 @@
 #root {
   width: 100%;
   min-height: 100vh;
-  background-color: rgba(29, 29, 31, 1);
+  background-color: #1d1d1f;
   color: var(--text1);
   overflow: hidden;
   z-index: 1;

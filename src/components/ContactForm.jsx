@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { AwesomeButton, AwesomeButtonProgress, AwesomeButtonSocial } from 'react-awesome-button';
-import styles from 'react-awesome-button/src/styles'
 
 const FORM_ENDPOINT = "https://public.herotofu.com/v1/0d857dd0-4742-11ee-afc4-2f612dbc7441";
 
@@ -56,24 +55,10 @@ const ContactForm = () => {
       onSubmit={handleSubmit}
       method="POST"
     >
-      <div>
         <input type="text" placeholder="Your name" name="name" required />
-      </div>
-      <div>
         <input type="email" placeholder="Your Email" name="email" required />
-      </div>
-      <div>
         <textarea type="text"placeholder="Your idea" name="message" required />
-      </div>
-      <div>
-      <AwesomeButtonProgress
-      type="secondary"
-      size="medium"
-      cssModule={styles}
-      >
-        Primary
-      </AwesomeButtonProgress>
-      </div>
+      <button type="submit" className="submitButton">Send</button>
     </form>
   );
 };
