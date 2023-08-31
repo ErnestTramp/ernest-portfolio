@@ -1,5 +1,6 @@
 import './AboutPage.css';
 import CountUp from 'react-countup';
+import AboutPicture from './AboutPicture';
 
 export default function AboutPage() {
     return (
@@ -21,7 +22,7 @@ export default function AboutPage() {
                         </div>
                     </div>
                 </div>
-            <img className='ernestImg' src="/option3.jpg" alt="Ernest Brenchley" />
+            <AboutPicture />
             </div>
         )
 }

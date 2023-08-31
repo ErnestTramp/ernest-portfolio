@@ -22,7 +22,8 @@
     "react-countup": "^6.4.2",
     "react-dom": "^18.2.0",
     "react-headroom": "^3.2.1",
-    "react-scroll": "^1.8.9"
+    "react-scroll": "^1.8.9",
+    "three": "^0.155.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
