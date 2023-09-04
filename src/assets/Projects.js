@@ -4,7 +4,7 @@ const ProjectsData = [
     title: "Worlds First 9 Flips",
     type: "athletic feat",
     description:
-      "With a team of the worlds top trampoline athletes and designers, we made history.",
+      "With a team of the worlds top trampoline athletes and designers, we made created a trampoline built for 9 flips and made history.",
     imageUrl: "/projectImg/9.jpg",
   },
   {
@@ -12,7 +12,7 @@ const ProjectsData = [
     title: "The Highest Trampoline Jump",
     type: "athletic feat",
     description:
-      "With help from the DD Squad, we broke the world record for the worlds highest trampoline jump.",
+      "With help from the DD Squad, I broke the world record for the worlds highest trampoline jump.",
     imageUrl: "/projectImg/slov.png",
   },
   {
@@ -54,7 +54,7 @@ const ProjectsData = [
     description:
       "I am also a profficent full stack web developer, this website was written from scratch in react by me!",
     imageUrl:
-      "https://www.freecodecamp.org/news/content/images/2023/02/image3-1.png",
+      "https://res.cloudinary.com/practicaldev/image/fetch/s--rTwykorI--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://thepracticaldev.s3.amazonaws.com/i/acj7wmyd64eku8uh45f9.jpeg",
   },
   {
     id: 8,

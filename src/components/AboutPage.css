@@ -5,21 +5,31 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5vh;
+    margin-bottom: 10vh;
 }
 
 .ernestImg {
-    max-width: 50%;
-    max-height: 53vh;
-    border-radius: 10%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80vh;
+    z-index: -1;
+    background-image: url(/option3.jpg);
+    background-size: cover;
+    filter: grayscale(.6);
+    /* border-radius: 10%;
+    margin-right: 10vh; */
 }
 
 .aboutText {
     margin: 0;
-    max-width: 50%;
+    min-width: 40%;
     font-size: 2.5vh;
     font-family: "font-regular", sans;
     text-align: right;
+    margin-left: 5vh;
 }
 
 .counters {
