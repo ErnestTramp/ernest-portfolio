@@ -3,22 +3,15 @@ import CountUp from "react-countup";
 import { useEffect, useState } from "react";
 
 export default function AboutPage() {
-  const [followers, setFollowers] = useState(1312499);
-  const [oldFollowers, setOldFollowers] = useState(1300000);
+  const addSpan = (note, styles) => {
+    return [...note].map((letter) => (
+      <span class="letter" style={styles}>
+        {letter}
+      </span>
+    ));
+  };
 
-  useEffect(() => {
-    const getRandomInterval = () => {
-      return Math.floor(Math.random() * (4000 - 1500 + 1)) + 1500; // Random interval between 1500 and 4000 milliseconds
-    };
-
-    const interval = setInterval(() => {
-      const randomChange = Math.random() < 0.5 ? -3 : 4; // Randomly +4 or -3
-      setOldFollowers(followers);
-      setFollowers((prevFollowers) => prevFollowers + randomChange);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
+  //  {addSpan("test",{color: 'blue'})} // TODO SPANIFY ALL THE NUMBERS AND ANIMATE THEM
 
   return (
     <div className="centerDiv-3">
@@ -29,7 +22,6 @@ export default function AboutPage() {
           duration={4}
           enableScrollSpy
           scrollSpyDelay={2}
-          suffix="+"
         />
         <CountUp
           start={2999999995}
@@ -37,7 +29,6 @@ export default function AboutPage() {
           duration={4}
           enableScrollSpy
           scrollSpyDelay={2}
-          suffix="+"
         />
         <p>followers : views</p>
       </div>

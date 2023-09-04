@@ -8,7 +8,7 @@ export default function Ball() {
       if (!ball.current.throttleTimer) {
         ball.current.throttleTimer = setTimeout(() => {
           const x = e.clientX - 700;
-          const y = e.clientY - 880;
+          const y = e.clientY - 680;
           ball.current.style.transform = `translate(${x}px, ${y}px)`;
           ball.current.throttleTimer = null;
         }, 10);
@@ -22,7 +22,9 @@ export default function Ball() {
     };
   }, []);
 
-  return <div className="ball" ref={ball}>
-    <h3>Click or Drag</h3>
-  </div>;
+  return (
+    <div className="ball" ref={ball}>
+      <h3>Click or Drag</h3>
+    </div>
+  );
 }

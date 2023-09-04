@@ -4,7 +4,6 @@ import "./ProjectPage.css";
 import ProjectsData from "../assets/Projects";
 import { gsap } from "gsap";
 import Ball from "./Ball";
-import { Parallax, Background } from "react-parallax";
 
 export default function ProjectPage() {
   const tl = gsap.timeline();
@@ -57,11 +56,13 @@ export default function ProjectPage() {
         ref={carousel}
         className="carousel"
         drag="x"
-        dragConstraints={{ right: 150, left: -width }}
+        dragConstraints={{ right: 200, left: -width }}
         style={{ marginLeft: offsetCarousel }}
       >
         {ProjectsData.map((project, index) => {
           const isSelected = index === selectedItem;
+          const isVideoAllowed = index < ProjectsData.length - 3;
+
           return (
             <motion.div
               ref={(element) => carouselItems.current.push(element)}
@@ -71,6 +72,19 @@ export default function ProjectPage() {
                 handleClick(project.id);
               }}
             >
+              <video
+                className={`prjVidContent ${
+                  isVideoAllowed && isSelected ? "video-selected" : ""
+                }`}
+                autoPlay
+                loop
+                muted
+                loading="lazy"
+                preload="none"
+              >
+                <source src={project.videoUrl} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
               <img
                 className="prjImgContent"
                 src={project.imageUrl}

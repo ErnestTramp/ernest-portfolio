@@ -6,6 +6,7 @@ const ProjectsData = [
     description:
       "With a team of the worlds top trampoline athletes and designers, we made created a trampoline built for 9 flips and made history.",
     imageUrl: "/projectImg/9.jpg",
+    videoUrl: "/projectVid/9.mp4",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ const ProjectsData = [
     description:
       "With help from the DD Squad, I broke the world record for the worlds highest trampoline jump.",
     imageUrl: "/projectImg/slov.png",
+    videoUrl: "/projectVid/slov.mp4",
   },
   {
     id: 3,
@@ -22,6 +24,7 @@ const ProjectsData = [
     description:
       "Alongside Airparc, Austria, me and my team have delivered 3 trampoline training camps in the Austrian Alps.",
     imageUrl: "/projectImg/airparc.jpg",
+    videoUrl: "/projectVid/airparc.mp4",
   },
   {
     id: 4,
@@ -30,6 +33,7 @@ const ProjectsData = [
     description:
       "I co-own the worlds biggest trampoline channel and team, scaling the YouTube to over 750,000 subscribers.",
     imageUrl: "/projectImg/rflipz.jpg",
+    videoUrl: "/projectVid/rflipz.mp4",
   },
   {
     id: 5,
@@ -38,6 +42,7 @@ const ProjectsData = [
     description:
       "I have been consistently collaborating with BergToys for 2+ years to put on events and create unique content.",
     imageUrl: "/projectImg/berg.jpg",
+    videoUrl: "/projectVid/berg.mp4",
   },
   {
     id: 6,
@@ -46,6 +51,7 @@ const ProjectsData = [
     description:
       "When a name as big as Travis Pastrana says he needs the biggest trampoline in the world in his backgarden, he gets it.",
     imageUrl: "/projectImg/trav.png",
+    videoUrl: "/projectVid/trav.mp4",
   },
   {
     id: 7,
