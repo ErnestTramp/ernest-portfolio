@@ -1,55 +1,47 @@
 import "./AboutPage.css";
 import CountUp from "react-countup";
-import AboutPicture from "./AboutPicture";
+import { useEffect, useState } from "react";
 
 export default function AboutPage() {
+  const [followers, setFollowers] = useState(1312499);
+  const [oldFollowers, setOldFollowers] = useState(1300000);
+
+  useEffect(() => {
+    const getRandomInterval = () => {
+      return Math.floor(Math.random() * (4000 - 1500 + 1)) + 1500; // Random interval between 1500 and 4000 milliseconds
+    };
+
+    const interval = setInterval(() => {
+      const randomChange = Math.random() < 0.5 ? -3 : 4; // Randomly +4 or -3
+      setOldFollowers(followers);
+      setFollowers((prevFollowers) => prevFollowers + randomChange);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="centerDiv-3">
       <div className="aboutText">
-        <h1>
-          I am on a mission to push the human{" "}
-          <span style={{ color: "#AF125A", cursor: "pointer" }}>body</span> and{" "}
-          <span style={{ color: "#87F1FF" }}>mind</span>.
-        </h1>
-        <div className="counters">
-          <div className="counter records">
-            <CountUp
-              className="count"
-              start={0}
-              end={5}
-              duration={2}
-              enableScrollSpy
-              delay={1}
-            />
-            <h3>records</h3>
-          </div>
-          <div className="counter followers">
-            <CountUp
-              className="count"
-              start={510000}
-              end={518000}
-              suffix="+"
-              duration={2}
-              enableScrollSpy
-              delay={1}
-            />
-            <h3>followers</h3>
-          </div>
-          <div className="counter views">
-            <CountUp
-              className="count"
-              start={0}
-              end={4}
-              suffix="b+"
-              duration={4}
-              enableScrollSpy
-              delay={1}
-            />
-            <h3>views</h3>
-          </div>
-        </div>
+        <CountUp
+          start={513995}
+          end={514000}
+          duration={4}
+          enableScrollSpy
+          scrollSpyDelay={2}
+          suffix="+"
+        />
+        <CountUp
+          start={2999999995}
+          end={3000000000}
+          duration={4}
+          enableScrollSpy
+          scrollSpyDelay={2}
+          suffix="+"
+        />
+        <p>followers : views</p>
       </div>
-      <div className="ernestImg">{/* <AboutPicture /> */}</div>
+      <div className="ernestImg" />
     </div>
   );
 }

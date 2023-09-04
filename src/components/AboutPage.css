@@ -1,9 +1,14 @@
+@font-face {
+    font-family: "font-italic";
+    src: url(/font-italic.otf);
+}
+
 .centerDiv-3 {
     width: 100%;
     height: 100vh;
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     margin-bottom: 10vh;
 }
@@ -13,49 +18,40 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
+    width: 75%;
     height: 80vh;
-    z-index: -1;
+    z-index: 2;
     background-image: url(/option3.jpg);
     background-size: cover;
-    filter: grayscale(.6);
-    /* border-radius: 10%;
-    margin-right: 10vh; */
+    background-position: center center;
+    background-repeat: no-repeat;
+    filter: grayscale(.7);
+    opacity: .8;
+    transition: filter 0.5s ease, opacity .5s ease;
+
+}
+
+.ernestImg:hover {
+    opacity: 0.9;
+    filter: grayscale(.3);
+    transition: filter 0.5s ease, opacity .5s ease;
 }
 
 .aboutText {
     margin: 0;
-    min-width: 40%;
-    font-size: 2.5vh;
+    width: 95%;
+    text-align: center;
+    font-size: 4.5vh;
     font-family: "font-regular", sans;
-    text-align: right;
-    margin-left: 5vh;
-}
-
-.counters {
-    display: flex;
-    justify-content: flex-end;
-    gap: 13vh;
-    margin-bottom: 3vh;
-}
-
-.counter {
-    margin: 0;
+    margin-bottom: 15vh;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    text-transform: lowercase;
+    z-index: 5;
 }
 
-.counter h3 {
+.aboutText p {
     margin: 0;
-    font-size: 2.5vh;
-    letter-spacing: 1px;
-    opacity: .7;
-}
+    font-size: 3vh;
+    font-family: "font-italic";
 
-.count {
-    font-size: 5.8vh;
-    margin: 0;
-    margin-right: .5vh;
 }
